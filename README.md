@@ -8,3 +8,4 @@ The script can limit any of the resources available in Python's `resource` modul
 - `resource` is a Unix specific package, as such the script will only work on Unix based systems
 - The following Python libraries are additionally required: `psutil`, `PyYAML`
 - Expect bugs!
+- Project built for college in collaboration with @Istr8

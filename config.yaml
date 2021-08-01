@@ -1,0 +1,27 @@
+comment:
+        resources: # Resources which can be limited for a given process
+            CORE: "The maximum size (in bytes) of a core file that the current process can create. This may result in the creation of a partial core file if a larger core would be required to contain the entire process image."
+            CPU: "The maximum amount of processor time (in seconds) that a process can use. If this limit is exceeded, a SIGXCPU signal is sent to the process."
+            FSIZE: "The maximum size of a file which the process may create."
+            DATA: "The maximum size (in bytes) of the process’s heap."
+            STACK: "The maximum size (in bytes) of the call stack for the current process. This only affects the stack of the main thread in a multi-threaded process."
+            RSS: "The maximum resident set size that should be made available to the process."
+            NPROC: "The maximum number of processes the current process may create."
+            NOFILE: "The maximum number of open file descriptors for the current process."
+            OFILE: "The BSD name for NOFILE."
+            MEMLOCK: "The maximum address space which may be locked in memory."
+            AS: "The maximum area (in bytes) of address space which may be taken by the process."
+            MSGQUEUE: "The number of bytes that can be allocated for POSIX message queues. Availability: Linux 2.6.8 or later."
+            NICE: "The ceiling for the process’s nice level (calculated as 20 - rlim_cur). Availability: Linux 2.6.12 or later."
+            RTPRIO: "The ceiling of the real-time priority. Availability: Linux 2.6.12 or later."
+            RTTIME: "The time limit (in microseconds) on CPU time that a process can spend under real-time scheduling without making a blocking syscall. Availability: Linux 2.6.25 or later."
+            SIGPENDING: "The number of signals which the process may queue. Availability: Linux 2.6.8 or later."
+limits: # Limited process names and limits for each resource
+        test1:
+            DATA: 2
+            STACK: 2
+            NPROC: 2
+        test2:
+            DATA: 2
+            STACK: 2
+            CORE: 5

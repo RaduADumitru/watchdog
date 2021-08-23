@@ -13,7 +13,7 @@ for p in procs['limits'].keys():
     pid = ''
     path = ''
     for proc in psutil.process_iter():  # check if process is running
-        if name in proc.name():  # if so, get PID and path and add process to list
+        if name == proc.name():  # if so, get PID and path and add process to list
             pid = proc.pid
             path = proc.exe()
             pidlist.append(pid)
